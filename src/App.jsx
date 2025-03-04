@@ -1,15 +1,16 @@
-import { useState } from 'react'
 import Header from './Components/Header'
+import Target from './Components/Target'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
        <Header/>
-  
 
+       <Target/>
+       
     </>
   )
 }
