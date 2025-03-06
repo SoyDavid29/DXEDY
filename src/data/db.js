@@ -17,16 +17,16 @@ export const db = [
 
     {
         id: 3,
-        name: 'Nike-Nuaxis',
-        image: 'W+NIKE+AIR+MAX+NUAXIS+SE',
+        name: 'Nike-Green',
+        image: 'nike-gree',
         description: 'Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.',
         price: '$1,699.00 MXN'
     },
 
     {
         id: 4,
-        name: 'Nike-Dunk',
-        image: 'W+NIKE+DUNK+LOW',
+        name: 'Nike-Brown',
+        image: 'nike-brown',
         description: 'Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.',
         price: '$1,999.00 MXN'
     },

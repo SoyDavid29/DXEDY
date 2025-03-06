@@ -1,14 +1,19 @@
-export default function Target(){
+export default function Target({ shoes }) {
 
-    return(
-     <div className="target">
-      <img className="img-shoes" src="/img/IN-DZ5485-105-1.jpg" alt="nike photo" />
-      <h1>Nike-Chunk</h1>
-      <p>Details</p>
-      <div className="price">
-        <p>$1,850.00 mxn</p>
-        <img className="car-logo" src="/img/car.png" alt="" />
-      </div>
-     </div>
+    const { id, name, image, description, price } = shoes
+
+    return (
+        
+            <div className="target">
+                <img className="img-shoes" src={`/img/${image}.jpg`} alt="nike photo" />
+                <h1>{name}</h1>
+                <p>Details</p>
+
+                <div className="price">
+                    <p>{price} mxn</p>
+                    <button className="btn-cart"><img className="car-logo" src="/img/car.png" alt="" /></button>
+                </div>
+            </div>
+
     )
 }
