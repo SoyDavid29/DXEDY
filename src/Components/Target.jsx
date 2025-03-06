@@ -1,6 +1,6 @@
-export default function Target({ shoes }) {
-
-    const { id, name, image, description, price } = shoes
+export default function Target({ shoes }) {  /* aplicamos destructuring del objeto */
+ 
+    const { id, name, image, description, price } = shoes /* parametros */
 
     return (
 
