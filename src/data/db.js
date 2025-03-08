@@ -18,7 +18,7 @@ export const db = [
     {
         id: 3,
         name: 'Nike-Green',
-        image: 'nike-gree',
+        image: 'nike-green',
         description: 'Morbi ornare augue nisl, vel elementum dui mollis vel. Curabitur non ex id eros fermentum hendrerit.',
         price: '$1,699.00 MXN'
     },
