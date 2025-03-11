@@ -7,6 +7,7 @@ import { db } from './data/db' /* importancion de db en forma de objeto{} */
 function App() {
   const [data, setData] = useState(db) /* useState para actualizacion de base de datos */
   const [cart, setCart] = useState([]) /* UseState para actualizar un array vacio */
+ 
 
   return (
     <>

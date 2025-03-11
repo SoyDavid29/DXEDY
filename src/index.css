@@ -41,6 +41,10 @@ body {
   padding: 10px;
 }
 
+.main-link{
+  cursor: pointer;
+}
+
 .car-logo {
   width: 40px;
   height: 40px;
@@ -65,7 +69,7 @@ h1 {
   align-items: start;
   flex-direction: column;
 
-  max-height: 400px;
+  max-height: 620px;
   max-width: 300px;
   box-shadow: 10px 10px 30px rgb(199, 198, 198);
 }
@@ -73,6 +77,32 @@ h1 {
 .img-shoes {
   width: 200px;
   height: 200px;
+}
+
+.detail{
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  border: solid 2px rgb(255, 165, 210);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgb(255, 165, 210);
+}
+
+.detail-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+}
+
+.details-text{
+ opacity: 0;
+}
+
+.details-text.show {
+  opacity: 1;
+  height: auto;
 }
 
 .price {
