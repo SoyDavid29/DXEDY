@@ -2,10 +2,10 @@ import { useState } from "react";
 
 export default function Target({ shoes }) {  /* aplicamos destructuring del objeto */
 
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(false); /* Declaracion de estado */
     
  
-    const { id, name, image, description, price } = shoes /* parametros */
+    const { id, name, image, description, price } = shoes /* parametros que estraemos del objeto */
 
     return (
 
@@ -25,7 +25,7 @@ export default function Target({ shoes }) {  /* aplicamos destructuring del obje
                 <p className={`details-text ${visible ? "show" : ""}`}>
                     {description}
                 </p>
-                
+
             </div>
     
 
