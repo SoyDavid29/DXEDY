@@ -7,6 +7,10 @@ export default function Target({ shoes }) {  /* aplicamos destructuring del obje
  
     const { id, name, image, description, price } = shoes /* parametros que estraemos del objeto */
 
+    const handleClick = (id) => {  /* Definimos funcion para el boton del carrito */
+       console.log('diste click', id)
+    }
+
     return (
 
         <div className="target">
@@ -31,8 +35,18 @@ export default function Target({ shoes }) {  /* aplicamos destructuring del obje
 
             <div className="price">
                 <p>{price} mxn</p>
-                <button className="btn-cart"><img className="car-logo" src="/img/car.png" alt="" /></button>
+
+                <button 
+                   type="button"
+                   className="btn-cart"
+                   onClick= { () => handleClick (shoes)}
+                   >
+                    <img className="car-logo" src="/img/car.png" alt="" />
+            
+                </button>
+
             </div>
+
         </div>
 
     )
