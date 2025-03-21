@@ -1,15 +1,11 @@
 import { useState } from "react";
 
-export default function Target({ shoes }) {  /* aplicamos destructuring del objeto */
+export default function Target({ shoes, setCart }) {  /* aplicamos destructuring del objeto */
 
     const [visible, setVisible] = useState(false); /* Declaracion de estado */
     
  
     const { id, name, image, description, price } = shoes /* parametros que estraemos del objeto */
-
-    const handleClick = (id) => {  /* Definimos funcion para el boton del carrito */
-       console.log('diste click', id)
-    }
 
     return (
 
@@ -20,7 +16,7 @@ export default function Target({ shoes }) {  /* aplicamos destructuring del obje
             <div className="detail-container">
                 <button 
                     className="detail"
-                    onClick={() => setVisible(!visible)}
+                    onClick={() => setVisible(!visible)} /* evento con arrow function a la funcion   */
                 >
                     Details
                 </button>
@@ -39,7 +35,7 @@ export default function Target({ shoes }) {  /* aplicamos destructuring del obje
                 <button 
                    type="button"
                    className="btn-cart"
-                   onClick= { () => handleClick (shoes)}
+                   onClick= { () => setCart (shoes)} /* evento con arrow function */
                    >
                     <img className="car-logo" src="/img/car.png" alt="" />
             

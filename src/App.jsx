@@ -8,6 +8,19 @@ function App() {
   const [data, setData] = useState(db) /* useState para actualizacion de base de datos */
   const [cart, setCart] = useState([]) /* UseState para actualizar un array vacio */
  
+  function addToCart(item){
+   const itemExist = cart.findIndex(shoes => shoes.id === item.id )
+   if(itemExist >= 0){
+    const updateCart = [...cart]
+    updateCart[itemExist].quantity++
+    setCart(updateCart)
+
+   }
+   else{
+    item.quantity = 1
+    setCart([...cart, item])
+   }
+  }
 
   return (
     <>
@@ -20,6 +33,7 @@ function App() {
           <Target
             key={shoes.id}
             shoes={shoes} /* nombreDelProp={parametros del objeto} */
+            setCart={setCart} /* pasamos como prop la funcion setCart */
           />
         ))}
       </div>
