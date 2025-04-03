@@ -9,19 +9,19 @@ export default function Cart() {
         <div id="carrito" className="table">
           <p className="text-cart">El carrito esta vacio</p>
           <table className="table-content">
-            <thead>
-              <tr>
-                <th>Imagen</th>
+            <thead> {/* encabezado  */}
+              <tr> {/* fila del encabezado */}
+                <th>Imagen</th> {/* celda */}
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
                 <th></th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <img className="img-item" src="./public/img/guitarra_02.jpg" alt="imagen guitarra" />
+            <tbody> {/* cuerpo de la tabla */}
+              <tr> {/* fila 1  */}
+                <td> {/* celda */}
+                  <img className="img-item" src="./public/img/nike-green.jpg" alt="imagen guitarra" />
                 </td>
                 <td>SRV</td>
                 <td className="price">
