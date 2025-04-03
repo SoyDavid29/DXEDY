@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Target({ shoes, setCart }) {  /* aplicamos destructuring del objeto */
+export default function Target({ shoes, addToCart}) {  /* aplicamos destructuring del objeto */
 
     const [visible, setVisible] = useState(false); /* Declaracion de estado */
     
@@ -35,7 +35,7 @@ export default function Target({ shoes, setCart }) {  /* aplicamos destructuring
                 <button 
                    type="button"
                    className="btn-cart"
-                   onClick= { () => setCart (shoes)} /* evento con arrow function */
+                   onClick= { () => addToCart (shoes)} /* evento con arrow function para actualizar el useState "setCart" con la funcionalidad de addToCart que agrega mi elemento shoes** */
                    >
                     <img className="car-logo" src="/img/car.png" alt="" />
             
