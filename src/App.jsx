@@ -1,5 +1,5 @@
 import Header from './Components/Header' /* importancion de component */
-import Cart from './Components/car'
+import Car from './Components/car'
 import Target from './Components/Target'  /* importancion de component */
 import { useState } from 'react'
 import { db } from './data/db' /* importancion de db en forma de objeto{} */
@@ -8,6 +8,9 @@ import { db } from './data/db' /* importancion de db en forma de objeto{} */
 function App() {
   const [data, setData] = useState(db) /* useState para actualizacion de base de datos */
   const [cart, setCart] = useState([]) /* UseState para actualizar un array vacio "cart" */
+
+  const [open, setOpen ] = useState(true)
+  const toggleCart= () => setOpen(prev => !prev);
  
   function addToCart(item){ /* creamos una funcion intermedia para escribir elementos a nuestro carrito de compras */
   const itemExist = cart.findIndex(shoes => shoes.id === item.id ) /* verificamos si existe un elemento con finIndex (no mutable) crea un objeto temporal (puede llamarse como sea, en este caso "shoes"*/
@@ -26,9 +29,11 @@ function App() {
 
   return (
     <>
-      <Header/>
       
-      <Cart/>
+      <div>
+      <Header toggleCar={toggleCar} />
+      <Cart open={open} />
+      </div>
   
       <h1>THE NEW!</h1>
 

@@ -117,13 +117,27 @@ h1 {
   cursor: pointer;
 }
 
+.cart{
+  opacity: 0;
+}
+
+.cart.show{
+  opacity: 1;
+}
+
 .table{
   display: flex;
   flex-direction: column;
   align-items: center;
 
   border: solid;
+  margin-top: 5px;
   padding: 10px;
+  width: 500px;
+  height: 100%;
+
+  transform: translateX(800px);
+
  
 }
 
@@ -136,8 +150,13 @@ h1 {
 th, td {
   text-align: center; /* Centra el contenido horizontalmente */
   vertical-align: middle; /* Alinea el contenido verticalmente */
+
   padding: 10px; /* Espaciado para mejor visualización */
-  border: 1px solid black;
+  
+}
+
+td{
+  border: solid;
 }
 
 .img-item{
