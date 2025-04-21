@@ -1,4 +1,4 @@
-export default function Header({toggleCart}) {
+export default function Header({toggleCart}) { /* toggleCart llama a la funcion cuando el icono es cliqueado  */
   
 
     return (
@@ -15,7 +15,7 @@ export default function Header({toggleCart}) {
 
                     <button className="btn-cart">
                      <img className="car-logo" src="/img/car.png" alt="" 
-                     onCLick={toggleCart}/>
+                     onClick={toggleCart}/>
                     </button>
                 </li>
 

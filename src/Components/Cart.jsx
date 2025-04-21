@@ -1,4 +1,4 @@
-export default function Cart() {
+export default function Cart({open}) {
   return (
 
     <nav className={`cart ${open ? "show" : ""}`}>
