@@ -50,10 +50,6 @@ body {
   height: 40px;
 }
 
-h1 {
-  margin-left: 20px;
-}
-
 .target-container {
   display: flex;
   justify-content: center;
@@ -61,7 +57,7 @@ h1 {
 }
 
 .target {
-  margin-top: 40px;
+  margin-top: -180px;
   padding: 15px;
   gap: 20px;
 
@@ -119,6 +115,7 @@ h1 {
 
 .cart{
   opacity: 0;
+
 }
 
 .cart.show{
@@ -130,14 +127,15 @@ h1 {
   flex-direction: column;
   align-items: center;
 
-  border: solid;
+  border: solid, 0.3px;
   margin-top: 5px;
   padding: 10px;
   width: 500px;
   height: 100%;
 
   transform: translateX(800px);
-
+  background-color: beige;
+ 
  
 }
 
@@ -155,9 +153,6 @@ th, td {
   
 }
 
-td{
-  border: solid;
-}
 
 .img-item{
   width: 100px;

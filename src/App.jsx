@@ -36,7 +36,6 @@ function App() {
       <Cart open={open} /> {/* pasamos como prop la variable de estado */}
       </div>
   
-      <h1>THE NEW!</h1>
 
       <div className='target-container'>
         {data.map((shoes) => ( /* se recorre un array y a cada objeto se le asigna el nombre */
