@@ -12,6 +12,8 @@ function App() {
 
   const [open, setOpen ] = useState(false) /* useState globlal para mis componentes */
   const toggleCart = () => setOpen(prev => !prev); /* toggle function actualiza el estado */
+
+
  
   function addToCart(item){ /* creamos una funcion intermedia para escribir elementos a nuestro carrito de compras */
   const itemExist = cart.findIndex(shoes => shoes.id === item.id ) /* verificamos si existe un elemento con finIndex (no mutable) crea un objeto temporal (puede llamarse como sea, en este caso "shoes"*/
@@ -34,10 +36,10 @@ function App() {
       <div className='header'>
       <Header toggleCart={toggleCart} /> {/* pasamos como prop la variable toggle */}
       <Cart 
-      open={open} /* pasamos como prop la variable de estado */
-      cart={cart}/> {/* vamos a sincronizar la tabla con nuestro state *cart* */}
+       open={open} /* pasamos como prop la variable de estado */
+       cart={cart}/> {/* vamos a sincronizar la tabla con nuestro state *cart* */}
       </div>
-  
+
 
       <div className='target-container'>
         {data.map((shoes) => ( /* se recorre un array y a cada objeto se le asigna el nombre */
