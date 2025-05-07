@@ -1,31 +1,44 @@
-export default function Cart() {
+export default function Cart({open, cart}) {
+
+   // STATE DERIVADO
+   const isEmpty = () => cart.length === 0
+   
   return (
 
-    <nav className="car">
+    <nav className={`cart ${open ? "show" : ""}`}>
       <div
         className="car-content"
       >
 
         <div id="carrito" className="table">
+          {isEmpty() ?(
           <p className="text-cart">El carrito esta vacio</p>
+          ) : (
           <table className="table-content">
             <thead> {/* encabezado  */}
               <tr> {/* fila del encabezado */}
-                <th>Imagen</th> {/* celda */}
+                <th>Producto</th> {/* celda */}
                 <th>Nombre</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
                 <th></th>
               </tr>
             </thead>
+
             <tbody> {/* cuerpo de la tabla */}
-              <tr> {/* fila 1  */}
+              {cart.map(shoes => ( /* el objeto shoes existe e itera sobre nuestra tabla mostrando sus caracteristicas como img, price, etc. */
+
+              <tr key={shoes.id}> {/* fila 1  */}
                 <td> {/* celda */}
-                  <img className="img-item" src="./public/img/nike-green.jpg" alt="imagen guitarra" />
+                  <img className="img-item" 
+                  src={`/img/${shoes.image}.jpg`}
+                  alt="imagen guitarra"
+                  />
+
                 </td>
-                <td>SRV</td>
+                <td>{shoes.name}</td> {/* para hecer dinamico agregamos caracteristicas de nuestro objeto {shoes} */}
                 <td className="price">
-                  $299
+                 {shoes.price}
                 </td>
                 <td className="buttons">
                   <button
@@ -34,7 +47,7 @@ export default function Cart() {
                   >
                     -
                   </button>
-                  1
+                  {shoes.quantity}
                   <button
                     type="button"
                     className="btn-dark"
@@ -51,9 +64,12 @@ export default function Cart() {
                   </button>
                 </td>
               </tr>
+
+               ))}
+               
             </tbody>
           </table>
-
+          )}
           <p className="text-end">Total pagar: <span className="total-price">$899</span></p>
           <button className="btn-vaciar">Vaciar Carrito</button>
         </div>

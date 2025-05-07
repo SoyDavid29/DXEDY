@@ -35,7 +35,7 @@ export default function Target({ shoes, addToCart}) {  /* aplicamos destructurin
                 <button 
                    type="button"
                    className="btn-cart"
-                   onClick= { () => addToCart (shoes)} /* evento con arrow function para actualizar el useState "setCart" con la funcionalidad de addToCart que agrega mi elemento shoes** */
+                   onClick= { () => addToCart (shoes)} /* evento con arrow function para actualizar el useState "setCart" con la funcionalidad de addToCart que agrega mi elemento shoes**n */
                    >
                     <img className="car-logo" src="/img/car.png" alt="" />
             

@@ -1,5 +1,5 @@
 import Header from './Components/Header' /* importancion de component */
-import Cart from './Components/car'
+import Cart from './Components/Cart'
 import Target from './Components/Target'  /* importancion de component */
 import { useState } from 'react'
 import { db } from './data/db' /* importancion de db en forma de objeto{} */
@@ -7,7 +7,13 @@ import { db } from './data/db' /* importancion de db en forma de objeto{} */
 
 function App() {
   const [data, setData] = useState(db) /* useState para actualizacion de base de datos */
+  
   const [cart, setCart] = useState([]) /* UseState para actualizar un array vacio "cart" */
+
+  const [open, setOpen ] = useState(false) /* useState globlal para mis componentes */
+  const toggleCart = () => setOpen(prev => !prev); /* toggle function actualiza el estado */
+
+
  
   function addToCart(item){ /* creamos una funcion intermedia para escribir elementos a nuestro carrito de compras */
   const itemExist = cart.findIndex(shoes => shoes.id === item.id ) /* verificamos si existe un elemento con finIndex (no mutable) crea un objeto temporal (puede llamarse como sea, en este caso "shoes"*/
@@ -26,11 +32,14 @@ function App() {
 
   return (
     <>
-      <Header/>
       
-      <Cart/>
-  
-      <h1>THE NEW!</h1>
+      <div className='header'>
+      <Header toggleCart={toggleCart} /> {/* pasamos como prop la variable toggle */}
+      <Cart 
+       open={open} /* pasamos como prop la variable de estado */
+       cart={cart}/> {/* vamos a sincronizar la tabla con nuestro state *cart* */}
+      </div>
+
 
       <div className='target-container'>
         {data.map((shoes) => ( /* se recorre un array y a cada objeto se le asigna el nombre */

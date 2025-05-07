@@ -10,6 +10,14 @@ body {
   font-weight: 600px;
 }
 
+.header{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+
+}
+
 .sidebar {
   margin-top: 5px;
 }
@@ -50,24 +58,23 @@ body {
   height: 40px;
 }
 
-h1 {
-  margin-left: 20px;
-}
-
 .target-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 30px;
+  transform: translateY(50px);
+ 
 }
 
 .target {
-  margin-top: 40px;
   padding: 15px;
   gap: 20px;
 
   display: flex;
   align-items: start;
   flex-direction: column;
+  flex-wrap: wrap;
 
   max-height: 620px;
   max-width: 300px;
@@ -115,6 +122,19 @@ h1 {
   padding: 5px;
   border: none;
   cursor: pointer;
+  position: relative;
+}
+
+.cart{
+  opacity: 0;
+  position: absolute;
+  transform: translateY(75px);
+  z-index: 999;
+
+}
+
+.cart.show{
+  opacity: 1;
 }
 
 .table{
@@ -122,8 +142,15 @@ h1 {
   flex-direction: column;
   align-items: center;
 
-  border: solid;
+  border: solid, 0.3px;
+  margin-top: 5px;
   padding: 10px;
+  width: 500px;
+  height: 100%;
+
+  transform: translateX(800px);
+  background-color: beige;
+ 
  
 }
 
@@ -136,9 +163,11 @@ h1 {
 th, td {
   text-align: center; /* Centra el contenido horizontalmente */
   vertical-align: middle; /* Alinea el contenido verticalmente */
+
   padding: 10px; /* Espaciado para mejor visualización */
-  border: 1px solid black;
+  
 }
+
 
 .img-item{
   width: 100px;
