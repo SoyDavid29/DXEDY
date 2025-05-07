@@ -10,6 +10,13 @@ body {
   font-weight: 600px;
 }
 
+.header{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+}
+
 .sidebar {
   margin-top: 5px;
 }

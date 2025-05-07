@@ -31,9 +31,11 @@ function App() {
   return (
     <>
       
-      <div>
+      <div className='header'>
       <Header toggleCart={toggleCart} /> {/* pasamos como prop la variable toggle */}
-      <Cart open={open} /> {/* pasamos como prop la variable de estado */}
+      <Cart 
+      open={open} /* pasamos como prop la variable de estado */
+      cart={cart}/> {/* vamos a sincronizar la tabla con nuestro state *cart* */}
       </div>
   
 
